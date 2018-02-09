@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wwjd</groupId>
-    <artifactId>eureka-config</artifactId>
+    <artifactId>springcloud-config</artifactId>
     <version>1.0.0-dao</version>
     <packaging>jar</packaging>
 
-    <name>eureka-config</name>
+    <name>springcloud-config</name>
     <description>this is a config application</description>
 
     <parent>
