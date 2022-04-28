@@ -1,0 +1,19 @@
+debug: false
+spring:
+  application:
+    name: mima-cloud-eureka
+server:
+  port: 8761
+eureka:
+  environment: prod #标识 eureka的环境
+  datacenter: cloud
+  instance:
+    #实例主机名
+    hostname: localhost
+  dashboard:   # 仪表盘的path设置和是否开启设置，默认是开启的，访问地址默认是ip:port
+    path: /dashboard
+    enabled: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
