@@ -17,6 +17,8 @@
         <module>springcloud-ribbon</module>
         <module>springcloud-zipkin</module>
         <module>springcloud-zuul</module>
+        <module>spring-cloud-producer</module>
+        <module>spring-cloud-consumer</module>
     </modules>
 
 
