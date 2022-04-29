@@ -3,9 +3,45 @@ spring:
   application:
     name: cloud-consumer
 server:
-  port: 8768
+  port: 8769
 eureka:
   client:
     serviceUrl: 
       defaultZone: http://localhost:8761/eureka/   #本地的eruka服务地址
 debug: false
+ribbon:
+  eager-load:
+    enabled: true
+    clients: cloud-producer,cloud-producer2
+cloud-producer:
+  ribbon:
+    # 代表Ribbon使用的负载均衡策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    # 同一服务器上的最大重试次数（不包括第一次尝试）
+    MaxAutoRetries: 1
+    # 要重试的下一台服务器的最大数量（不包括第一台服务器）
+    MaxAutoRetriesNextServer: 1
+    # 是否可以重试此客户端的所有操作
+    OkToRetryOnAllOperations: true
+    # 从源刷新服务器列表的时间间隔
+    ServerListRefreshInterval: 2000
+    # Connect timeout used by Apache HttpClient
+    ConnectTimeout: 3000
+    # Read timeout used by Apache HttpClient
+    ReadTimeout: 3000
+cloud-producer2:
+  ribbon:
+    # 代表Ribbon使用的负载均衡策略
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.ZoneAvoidanceRule
+    # 同一服务器上的最大重试次数（不包括第一次尝试）
+    MaxAutoRetries: 1
+    # 要重试的下一台服务器的最大数量（不包括第一台服务器）
+    MaxAutoRetriesNextServer: 1
+    # 是否可以重试此客户端的所有操作
+    OkToRetryOnAllOperations: true
+    # 从源刷新服务器列表的时间间隔
+    ServerListRefreshInterval: 2000
+    # Connect timeout used by Apache HttpClient
+    ConnectTimeout: 3000
+    # Read timeout used by Apache HttpClient
+    ReadTimeout: 3000

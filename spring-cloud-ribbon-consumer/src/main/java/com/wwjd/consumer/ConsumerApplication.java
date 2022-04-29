@@ -14,13 +14,13 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@RibbonClients(
-		defaultConfiguration = RibbonClientConfiguration.class,
-		value = {
-				@RibbonClient(name="cloud-producer",configuration = ConsumerRibbonConfig.class),
-				@RibbonClient(name="cloud-producer2",configuration = ConsumerRibbonConfig2.class)
-
-})
+//@RibbonClients(
+//		defaultConfiguration = RibbonClientConfiguration.class,
+//		value = {
+//				@RibbonClient(name="cloud-producer",configuration = ConsumerRibbonConfig.class),
+//				@RibbonClient(name="cloud-producer2",configuration = ConsumerRibbonConfig2.class)
+//
+//})
 public class ConsumerApplication {
 	
 	@Bean

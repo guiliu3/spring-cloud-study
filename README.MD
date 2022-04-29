@@ -33,6 +33,10 @@
 ### 1.6 多机高可用
 
 ## 2、Ribbon负载均衡学习
+    Ribbon主要是负责请求的分发，比如请求的微服务是集群的，客户端发起请求，Ribbon会根据不通的
+    负载策略将请求分发到不通的服务端，从而缓解服务端的压力。且Ribbon是基于客户端的负载均衡。
+    这点与Nginx有所不同
+    
 ### 2.1 消费者微服务通过Ribbon负载均衡调用生产者微服务演示案例
     结构图如下：
 ![Ribbon演示案例图](img/Ribbon演示案例图.jpg)
@@ -44,7 +48,22 @@
  
  ### 2.2 Ribbon消费者微服务通过配置类设置，使访问多个微服务访问的负载策略不同
     详情见spring-cloud-ribbon-consumer项目
+    注意：Ribbon Rule，但是不能够和启动类同一个包下面，否则他们都会公用同一个策略。
     
+ ### 2.3 Ribbon负载策略模式详解 
     
+    模式详解：
+    1、RoundRobinRule 轮询
+    2、RandomRule 随机
+    3、RetryRule 轮询重试
+    4、WeightedResponseTimeRule 响应速度权重
+    5、BestAvailabledRule 最优可用，选择并发最小的
+    6、AvailabilityFilteringRule 先过滤不可用的实例，其次选择并发最小的
+    7、ZoneAvoidanceRule 复合判断server所在区域的性能和server的可用性选择服务器。(默认)
+ 
+ ### 2.4 Ribbon通过application.yml配置负载策略
+    详情见spring-cloud-ribbon-consumer项目配置文件
+    
+  
  
     
