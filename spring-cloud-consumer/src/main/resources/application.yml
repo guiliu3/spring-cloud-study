@@ -1,8 +1,8 @@
 spring:
   application:
-    name: mima-cloud-consumer
+    name: cloud-consumer
 server:
-  port: 8802
+  port: 8764
 eureka:
   client:
     serviceUrl: 

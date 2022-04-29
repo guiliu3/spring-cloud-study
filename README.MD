@@ -31,3 +31,20 @@
     详情查看eureka服务端单机高可用配置文件
 
 ### 1.6 多机高可用
+
+## 2、Ribbon负载均衡学习
+### 2.1 消费者微服务通过Ribbon负载均衡调用生产者微服务演示案例
+    结构图如下：
+![Ribbon演示案例图](img/Ribbon演示案例图.jpg)
+    
+    
+    需要在消费者微服务的RestTemplate增加@LoadBalanced注解。
+    请求地址填写注册到Eureka服务的名称，若填写ip,否则会报在EurekaServer端找不到对应实例。
+    报错信息：No instances available for localhost
+ 
+ ### 2.2 Ribbon消费者微服务通过配置类设置，使访问多个微服务访问的负载策略不同
+    详情见spring-cloud-ribbon-consumer项目
+    
+    
+ 
+    

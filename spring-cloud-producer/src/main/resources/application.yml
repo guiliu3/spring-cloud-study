@@ -1,19 +1,16 @@
 spring:
   application:
-    name: mima-cloud-consul-producer
+    name: cloud-producer2
 server:
-  port: 8982
+  port: 8766
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/   # eureka 服务端的地址
   instance:
-    app-group-name: producer
-    appname: producer #应用名称
+    app-group-name: cloud-producer2
+    appname: cloud-producer2 #应用名称
     prefer-ip-address: true # 设置为true，表示使用主机IP，而不是主机名
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}  #eureka 实例id名称
-    metadata-map:
-      liugui: 123
-      test: map
 
 
