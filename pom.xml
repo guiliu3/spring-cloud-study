@@ -20,6 +20,8 @@
         <module>spring-cloud-producer</module>
         <module>spring-cloud-consumer</module>
 		 <module>spring-cloud-ribbon-consumer</module>
+        <module>spring-cloud-fegin-consumer</module>
+        <module>springcloud-hystrix</module>
     </modules>
 
 

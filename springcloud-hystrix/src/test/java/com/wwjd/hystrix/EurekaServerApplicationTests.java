@@ -1,4 +1,4 @@
-package com.wwjd.eurekaserver;
+package com.wwjd.hystrix;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
