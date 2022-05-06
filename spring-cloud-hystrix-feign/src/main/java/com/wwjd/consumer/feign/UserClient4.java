@@ -3,6 +3,7 @@ package com.wwjd.consumer.feign;
 import com.wwjd.config.FeignNoHystrixConfigure;
 import com.wwjd.consumer.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.netflix.feign.FeignClientsConfiguration;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2022/5/5 19:28
  * @Copyright © 上海卓繁
  */
-@FeignClient(name="cloud-producer4",configuration = FeignNoHystrixConfigure.class)
+@FeignClient(name="cloud-producer4",configuration = FeignClientsConfiguration.class)
 public interface UserClient4 {
 
     // @PathVariable必须指定value,且指定名称，否则异常:PathVariable annotation was empty on param 0.

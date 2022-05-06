@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Scope;
  * @date 2022/5/6 21:19
  * @Copyright © 上海卓繁
  */
-@Configuration
 public class FeignNoHystrixConfigure {
 
     @Bean

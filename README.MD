@@ -87,11 +87,26 @@
 | 异步     | 支持                  | 不支持                   |  
 | 并发支持 | 支持（最大线程池大小）    | 支持（最大信号量上限）      |
 
-## 4.2 Hystrix与Fegin结合
+### 4.2 Hystrix与Fegin结合
      1、基于interface 接口实现
      
      2、基于fallbackFactory实现
      
-     
+### 4.3 Fegin 禁用 Hystrix 
+     1、完全禁用
+        在配置文件中关闭 Feign的Hystrix的使用，如下面所示：
+````yaml
+    feign:
+        hystrix:
+          #开启feign的hystrix支持,默认是false
+          enabled: false
+ ````
+     2、部分禁用
+        通过在FeignClient注解中的configuration属性增加没有Hystrix的配置类。
+   
 
- 
+### 4.3 Hystrix的仪表盘
+![Hystrix仪表盘](img/hystrix仪表盘.jpg) 
+访问地址：http://localhost:8764/hystrix/monitor
+
+            
