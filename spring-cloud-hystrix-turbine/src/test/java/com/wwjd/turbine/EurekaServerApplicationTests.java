@@ -1,4 +1,4 @@
-package com.wwjd.hystrix;
+package com.wwjd.turbine;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

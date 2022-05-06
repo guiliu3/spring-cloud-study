@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hystrix-turbine
+server:
+  port: 8711
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/   #本地的eruka服务地址
+### 默认集群监控配置
+turbine:
+  aggregator:
+  #监控单个微服务集群
+  #单独监控地址：http://127.0.0.1:8711/turbine.stream?cluster=CLOUD-FEIGN-HYSTRIX-CONSUMER
+  #clusterConfig必须为对应的大写
+    clusterConfig: CLOUD-FEIGN-HYSTRIX-CONSUMER
+  appConfig: cloud-feign-hystrix-consumer
