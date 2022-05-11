@@ -1,0 +1,8 @@
+zuul:
+  routes:
+    # 单独设置某一个服务的反向代理规则，名字随意，只要不重复
+    producer:
+      path: /cp/**
+      serviceId: cloud-producer
+  # 忽略所有默认代理配置
+  ignored-services: '*'

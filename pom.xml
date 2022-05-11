@@ -16,12 +16,14 @@
         <module>springcloud-feign</module>
         <module>springcloud-ribbon</module>
         <module>springcloud-zipkin</module>
-        <module>springcloud-zuul</module>
+        <module>spring-cloud-zuul</module>
         <module>spring-cloud-producer</module>
         <module>spring-cloud-consumer</module>
 		 <module>spring-cloud-ribbon-consumer</module>
         <module>spring-cloud-fegin-consumer</module>
         <module>springcloud-hystrix</module>
+		<module>spring-cloud-hystrix-feign</module>
+		<module>spring-cloud-hystrix-turbine</module>
     </modules>
 
 

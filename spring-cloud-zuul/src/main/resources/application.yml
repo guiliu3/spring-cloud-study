@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-zuul
+server:
+  port: 8715
+profiles: zuul5
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    app-group-name: cloud-zuul
+    appname: cloud-zuul #应用名称
+    prefer-ip-address: true # 设置为true，表示使用主机IP，而不是主机名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}  #eureka 实例id名称

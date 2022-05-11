@@ -1,16 +1,19 @@
 spring:
   application:
-    name: cloud-producer2
+    name: cloud-producer
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
 server:
-  port: 8766
+  port: 8768
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/   # eureka 服务端的地址
   instance:
-    app-group-name: cloud-producer2
-    appname: cloud-producer2 #应用名称
+    app-group-name: cloud-producer
+    appname: cloud-producer #应用名称
     prefer-ip-address: true # 设置为true，表示使用主机IP，而不是主机名
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}  #eureka 实例id名称
-
-

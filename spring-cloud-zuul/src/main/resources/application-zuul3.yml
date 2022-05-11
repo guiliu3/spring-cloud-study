@@ -1,0 +1,9 @@
+zuul:
+  routes:
+    # 单独设置某一个服务的反向代理规则，名字随意，只要不重复
+    producer:
+      path: /cp-url/**
+      # 可以使用url这种配置形式，但是不会支持Hystrix断路器和Ribbon的负载均衡
+      url: http://192.168.158.21:8768
+  # 忽略所有默认代理配置
+  ignored-services: '*'
