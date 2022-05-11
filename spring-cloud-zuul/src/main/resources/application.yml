@@ -1,6 +1,8 @@
 spring:
   application:
     name: cloud-zuul
+  profiles:
+    active: zuul1
 server:
   port: 8715
 eureka:
