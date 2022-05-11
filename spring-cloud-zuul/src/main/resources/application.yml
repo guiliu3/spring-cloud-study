@@ -3,7 +3,6 @@ spring:
     name: cloud-zuul
 server:
   port: 8715
-profiles: zuul5
 eureka:
   client:
     serviceUrl:
