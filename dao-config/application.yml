@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        #git远程地址
+        git: https://github.com/guiliu3/spring-cloud-study/dao-config
+        #搜索目录
+        search-paths: /**
+        #git默认分支
+        default-label: master
+      #是否开启配置中心
+      enabled: true
+      #默认的分支
+      label: master
+server:
+  port: 8766
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/   # eureka 服务端的地址
+  instance:
+    app-group-name: cloud-config
+    appname: cloud-config #应用名称
+    prefer-ip-address: true # 设置为true，表示使用主机IP，而不是主机名
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}  #eureka 实例id名称
