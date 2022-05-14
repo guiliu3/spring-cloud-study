@@ -24,6 +24,8 @@
         <module>springcloud-hystrix</module>
 		<module>spring-cloud-hystrix-feign</module>
 		<module>spring-cloud-hystrix-turbine</module>
+        <module>spring-cloud-consul-consumer</module>
+        <module>spring-cloud-consul-producer</module>
     </modules>
 
 
